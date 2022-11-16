@@ -4,7 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdarg.h>
+#include <unistd.h>
+#include <stddef.h>
+#include <limits.h>
+#include <stdbool.h>
+
+#define MAX(a,b) ((a) > (b) ? (a) : (b))
 
 /* STRUCTS */
 /* Basic Binary Tree */
@@ -37,7 +42,7 @@ typedef struct binary_tree_s heap_t;
 
 
 /* PROTOTYPES */
-
+void binary_tree_print(const binary_tree_t *tree);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
